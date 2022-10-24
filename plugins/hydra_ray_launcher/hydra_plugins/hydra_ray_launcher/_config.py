@@ -145,6 +145,7 @@ class RayProviderConf:
     type: str = "aws"
     region: str = "us-west-2"
     availability_zone: str = "us-west-2a,us-west-2b"
+    use_internal_ips: bool = False
     cache_stopped_nodes: bool = False
     key_pair: Dict[str, str] = field(
         default_factory=lambda: {"key_name": "hydra-${oc.env:USER,user}"}
